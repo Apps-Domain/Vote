@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Page Title</title>
+</head>
+<body>
+    <h1>Hello, World!</h1>
+    <pre>#include <stdio.h>
+#include <stdlib.h>
+struct Node {
+ int data;
+ struct Node *prev;
+ struct Node *next;
+};
+struct Node *head = NULL;
+void insertAtEnd(int value) {
+ struct Node *newNode = (struct Node *) malloc(sizeof(struct Node));
+ newNode->data = value;
+ newNode->next = NULL;
+ if (head == NULL) {
+ newNode->prev = NULL;
+ head = newNode;
+ return;
+ }
+ struct Node *temp = head;
+ while (temp->next != NULL) {
+ temp = temp->next;
+ }
+ temp->next = newNode;
+ newNode->prev = temp;
+}
+void insertAtBeginning(int value) {
+ struct Node *newNode = (struct Node *) malloc(sizeof(struct Node));
+ newNode->data = value;
+ newNode->prev = NULL;
+ newNode->next = head;
+ if (head != NULL) {
+ head->prev = newNode;
+ }
+ head = newNode;
+}
+void displayForward() {
+ struct Node *temp = head;
+ if (temp == NULL) {
+ printf("List is empty.\n");
+ return;
+ }
+ printf("Forward: NULL <- ");
+ while (temp != NULL) {
+ printf("%d -> ", temp->data);
+ if (temp->next == NULL) break;
+ temp = temp->next;
+ }
+ printf("NULL\n");
+}
+void displayBackward() {
+ struct Node *temp = head;
+if (temp == NULL) {
+ printf("List is empty.\n");
+ return;
+ }
+ while (temp->next != NULL) {
+ temp = temp->next;
+ }
+ printf("Backward: NULL <- ");
+ while (temp != NULL) {
+ printf("%d -> ", temp->data);
+ temp = temp->prev;
+ }
+ printf("NULL\n");
+}
+int main() {
+ int choice, value;
+ while (1) {
+ printf("\n----- DOUBLY LINKED LIST MENU -----\n");
+ printf("1. Insert at end\n");
+ printf("2. Insert at beginning\n"); 
+ printf("3. Display forward\n");
+ printf("4. Display backward\n");
+ printf("5. Exit\n");
+ printf("Enter your choice: ");
+ scanf("%d", &choice);
+ switch (choice) {
+ case 1:
+ printf("Enter value to insert: ");
+ scanf("%d", &value);
+ insertAtEnd(value);
+ break;
+ case 2:
+ printf("Enter value to insert: ");
+ scanf("%d", &value);
+ insertAtBeginning(value);
+ break;
+ case 3:
+ displayForward();
+ break;
+ case 4:
+ displayBackward();
+ break;
+ case 5:
+ exit(0);
+ default:
+ printf("Invalid choice. Try again.\n");
+ }
+ }
+ return 0;
+}</pre>
+</body>
+</html>
