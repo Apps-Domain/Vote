@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Text Slots</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            margin: 0;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+        }
+
+        .slots {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            max-width: 1000px;
+            margin: 30px auto;
+        }
+
+        .slot {
+            background: white;
+            border: 2px solid #ccc;
+            border-radius: 10px;
+            padding: 15px;
+        }
+
+        .slot h3 {
+            margin-top: 0;
+        }
+
+        textarea {
+            width: 100%;
+            height: 120px;
+            box-sizing: border-box;
+            resize: vertical;
+            padding: 10px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+        }
+
+        @media (max-width: 700px) {
+            .slots {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>My Text Slots</h1>
+
+    <div class="slots">
+
+        <div class="slot">
+            <h3>Slot 1</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+        <div class="slot">
+            <h3>Slot 2</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+        <div class="slot">
+            <h3>Slot 3</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+        <div class="slot">
+            <h3>Slot 4</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+        <div class="slot">
+            <h3>Slot 5</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+        <div class="slot">
+            <h3>Slot 6</h3>
+            <textarea placeholder="Write something..."></textarea>
+        </div>
+
+    </div>
+
+</body>
+</html>
