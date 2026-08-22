@@ -1,152 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>My Slots</title>
-
-    <style>
-        * {
-            box-sizing: border-box;
-        }
-
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #f2f2f2;
-        }
-
-        #home {
-            padding: 30px;
-        }
-
-        h1 {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .tabs {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 15px;
-            max-width: 900px;
-            margin: auto;
-        }
-
-        .tab {
-            height: 120px;
-            border: none;
-            border-radius: 12px;
-            background: white;
-            box-shadow: 0 3px 10px #ccc;
-            font-size: 20px;
-            cursor: pointer;
-        }
-
-        .tab:hover {
-            background: #e8e8e8;
-        }
-
-        .slot-page {
-            display: none;
-            padding: 25px;
-        }
-
-        .back {
-            border: none;
-            background: #333;
-            color: white;
-            padding: 10px 18px;
-            border-radius: 8px;
-            font-size: 16px;
-            cursor: pointer;
-        }
-
-        .slot-page h1 {
-            margin-top: 40px;
-        }
-
-        .slot-text {
-            max-width: 900px;
-            margin: 30px auto;
-            padding: 30px;
-            background: white;
-            border-radius: 12px;
-            box-shadow: 0 3px 10px #ccc;
-            font-size: 24px;
-            text-align: center;
-        }
-
-        @media (max-width: 700px) {
-            .tabs {
-                grid-template-columns: repeat(2, 1fr);
-            }
-        }
-    </style>
+    <title>Free save slots</title>
 </head>
 
 <body>
 
-    <!-- HOME -->
-    <div id="home">
+    <h1>Free Save Slots</h1>
 
-        <h1>My Slots</h1>
+    <a href="slot1.html">Slot 1</a>
+    <br><br>
 
-        <div class="tabs">
+    <a href="slot2.html">Slot 2</a>
+    <br><br>
 
-            <button class="tab" onclick="openSlot(1)">Slot 1</button>
-            <button class="tab" onclick="openSlot(2)">Slot 2</button>
-            <button class="tab" onclick="openSlot(3)">Slot 3</button>
-            <button class="tab" onclick="openSlot(4)">Slot 4</button>
+    <a href="slot3.html">Slot 3</a>
+    <br><br>
 
-            <button class="tab" onclick="openSlot(5)">Slot 5</button>
-            <button class="tab" onclick="openSlot(6)">Slot 6</button>
-            <button class="tab" onclick="openSlot(7)">Slot 7</button>
-            <button class="tab" onclick="openSlot(8)">Slot 8</button>
+    <a href="slot4.html">Slot 4</a>
+    <br><br>
 
-            <button class="tab" onclick="openSlot(9)">Slot 9</button>
-            <button class="tab" onclick="openSlot(10)">Slot 10</button>
-            <button class="tab" onclick="openSlot(11)">Slot 11</button>
-            <button class="tab" onclick="openSlot(12)">Slot 12</button>
-
-        </div>
-
-    </div>
-
-
-    <!-- SLOT PAGE -->
-    <div id="slotPage" class="slot-page">
-
-        <button class="back" onclick="goHome()">← Back</button>
-
-        <h1 id="slotTitle"></h1>
-
-        <div class="slot-text" id="slotText"></div>
-
-    </div>
-
-
-    <script>
-
-        function openSlot(number) {
-
-            document.getElementById("home").style.display = "none";
-            document.getElementById("slotPage").style.display = "block";
-
-            document.getElementById("slotTitle").innerText =
-                "Slot " + number;
-
-            document.getElementById("slotText").innerText =
-                "I am Slot " + number;
-
-        }
-
-        function goHome() {
-
-            document.getElementById("slotPage").style.display = "none";
-            document.getElementById("home").style.display = "block";
-
-        }
-
-    </script>
+    <a href="slot5.html">Slot 5</a>
 
 </body>
 </html>
