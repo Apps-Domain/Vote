@@ -1,27 +1,88 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Free save slots</title>
+    <title>Free Save Slots</title>
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #eaf5ea;
+            padding: 30px;
+        }
+
+        h1 {
+            text-align: center;
+            color: #2e7d32;
+            font-size: 45px;
+        }
+
+        .slots {
+            max-width: 900px;
+            margin: 40px auto;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .slot {
+            background: white;
+            padding: 30px;
+            text-align: center;
+            border-radius: 15px;
+            box-shadow: 0 4px 12px #bbb;
+            text-decoration: none;
+            color: #222;
+            font-size: 24px;
+        }
+
+        .slot:hover {
+            background: #d8efd8;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 15px;
+            }
+
+            h1 {
+                font-size: 35px;
+            }
+
+            .slots {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 15px;
+            }
+
+            .slot {
+                padding: 25px 10px;
+                font-size: 20px;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>Free Save Slots</h1>
+    <h1>🧾 Free Save Slots</h1>
 
-    <a href="slot1.html">Slot 1</a>
-    <br><br>
+    <div class="slots">
 
-    <a href="slot2.html">Slot 2</a>
-    <br><br>
+        <a class="slot" href="slot1.html">Slot 1</a>
 
-    <a href="slot3.html">Slot 3</a>
-    <br><br>
+        <a class="slot" href="slot2.html">Slot 2</a>
 
-    <a href="slot4.html">Slot 4</a>
-    <br><br>
+        <a class="slot" href="slot3.html">Slot 3</a>
 
-    <a href="slot5.html">Slot 5</a>
+        <a class="slot" href="slot4.html">Slot 4</a>
+
+        <a class="slot" href="slot5.html">Slot 5</a>
+
+        <a class="slot" href="slot6.html">Slot 6</a>
+
+    </div>
 
 </body>
 </html>
