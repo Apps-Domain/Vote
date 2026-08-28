@@ -9,12 +9,46 @@
 
     <h1>Slot 5</h1>
 
-    <p>
-        Plants are living organisms that make their own food through
-        photosynthesis. They need sunlight, water, carbon dioxide, and
-        nutrients to grow. Plants are important because they produce
-        oxygen, provide food, and support many other living organisms.
-    </p>
+    <pre>
+         # Fibonacci series of first n numbers
+n = int(input("Enter the number of terms:")) #Reads the limit
+f1,f2=0,1
+f3=f1+f2
+print("Fibonacci series of first", n, "terms")
+print(f1)
+print(f2)
+for i in range(3, n+1):
+    print(f3)
+    f1=f2
+    f2=f3
+    f3=f1+f2
+
+        # Count the number of vowels, consonants, digits and special characters
+str=input("Enter a String:") #Reads the string
+vowels=consonants=digits=specialchar=0
+
+for char in str:
+    if char in 'aeiouAEIOU': vowels+=1
+    if char in 'bBcCdDfFgGhHjJkKlLmMnNpPqQrRsStTvVwWxXyYzZ': consonants+=1
+    if char in '0123456789': digits+=1
+    if char in '!@#$%^&*<>?:': specialchar+=1
+
+print("The number of vowels=",vowels)
+print("The number of consonants=",consonants)
+print("The number of digits=",digits)
+print("The number of special characters=",specialchar)
+
+        # Sum of all elements in a list
+
+list = input("Enter a list:") #Reads the list from the keyboard
+list1=map(int,list.split()) # Convert the items in it to integers
+sum=0 #initialise sum to 0
+
+for i in list1:
+    sum=sum+i
+
+print("The sum of all items in list ", list, "is", sum)
+    </pre>
 
     <a href="index.html">Back to Home</a>
 
